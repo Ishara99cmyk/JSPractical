@@ -46,12 +46,33 @@ function validateForm() {
     return false;
   }
   // write codes for validate other fields like above
+   if (!nameRegex.test(lastName)) {
+    alert("Invalid last name. Use only letters.");
+    return false;
+  }
 
+  if (!emailRegex.test(email)) {
+    alert("Invalid email format.");
+    return false;
+  }
 
+  if (!phoneRegex.test(phone)) {
+    alert("Phone number should be 7 to 15 digits.");
+    return false;
+  }
+
+  if (!passwordRegex.test(password)) {
+    alert("Password must be at least 6 characters long.");
+    return false;
+  }
 
   alert("Form submitted successfully!");
   return true;
 }
+
+
+
+ 
 </script>
 
 </body>
