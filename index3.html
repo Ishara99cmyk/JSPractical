@@ -44,17 +44,16 @@ function validateForm() {
   if (!nameRegex.test(firstName)) {
     alert("Invalid first name. Use only letters.");
     return false;
-  }
-  // write codes for validate other fields like above
-
-  if (!emailRegex.test(email)) {
+  } else if (!nameRegex.test(lastName)) {
+    alert("Invalid last name. Use only letters.");
+    return false;
+  } else if (!emailRegex.test(email)) {
     alert("Invalid email.");
     return false;
-
+  }
   alert("Form submitted successfully!");
   return true;
   }
-}
 </script>
 
 </body>
