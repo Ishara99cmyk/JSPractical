@@ -47,10 +47,13 @@ function validateForm() {
   }
   // write codes for validate other fields like above
 
-
+  if (!emailRegex.test(email)) {
+    alert("Invalid email.");
+    return false;
 
   alert("Form submitted successfully!");
   return true;
+  }
 }
 </script>
 
