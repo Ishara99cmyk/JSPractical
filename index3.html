@@ -45,9 +45,22 @@ function validateForm() {
     alert("Invalid first name. Use only letters.");
     return false;
   }
-  // write codes for validate other fields like above
-
-
+  if (!nameRegex.test(lastName)) {
+    alert("Last name must contain only letters.");
+    return false; 
+  }
+  if (!nameRegex.test(email)) {
+    alert("Please enter a valid email address.");
+    return false; 
+  }
+  if (!nameRegex.test(phone)) {
+    alert("Phone number must be 10 digits.");
+    return false; 
+  }
+  if (!nameRegex.test(password)) {
+    alert("Password must be at least 6 characters long.");
+    return false; 
+  }
 
   alert("Form submitted successfully!");
   return true;
