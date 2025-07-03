@@ -50,6 +50,12 @@ function validateForm() {
   } else if (!emailRegex.test(email)) {
     alert("Invalid email.");
     return false;
+  } else if (!phoneRegex.test(phone)) {
+    alert("Invalid phone number. Use only numbers.");
+    return false;
+  } else if (!passwordRegex.test(password)) {
+    alert("Invalid passwrod. Must contain 6 or more characters.");
+    return false;
   }
   alert("Form submitted successfully!");
   return true;
