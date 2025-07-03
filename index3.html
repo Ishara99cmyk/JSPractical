@@ -46,12 +46,14 @@ function  validateForm() {
     return false;
   }
 
-  if (!nameRegex.test(LastName)) {
+  // write codes for validate other fields like above
+
+  if (!nameRegex.test(lastName)) {
     alert("Invalid first name. Use only letters.");
     return false;
   }
 
-  if(!emailRegex.test(mail)) {
+  if(!emailRegex.test(email)) {
     alert("Please enter a valid email address.");
     return false;
   }
@@ -61,9 +63,7 @@ function  validateForm() {
   }
   if(!passwordRegex.test(password)) {
     alert("Password must be at least 6 characters long.");
-    return false;
   }
-
 
   alert("Form submitted successfully!");
   return true;
