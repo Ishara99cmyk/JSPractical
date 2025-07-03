@@ -2,14 +2,61 @@
 <html>
 <head>
   <title>Simple Form Validation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ece9e6, #ffffff);
+      padding: 50px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    form {
+      background-color: #f9f9f9;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: inline-block;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
   <h2>User Information Form</h2>
   <form id="userForm" onsubmit="return validateForm()">
-    <label for="email">Email:</label><br>
+    <label for="email">Email:</label>
     <input type="text" id="email" name="email"><br><br>
-
-
 
     <input type="submit" value="Submit">
   </form>
@@ -17,10 +64,9 @@
   <script>
     function validateForm() {
       const email = document.getElementById("email").value.trim();
-     
+
       if (!/[abc]/.test(email)) {
-        alert("input should have a,b or c");
-        console.log(emailRegexp.test(email))
+        alert("Input should contain at least one of: a, b, or c.");
         return false;
       }
 
