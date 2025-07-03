@@ -44,6 +44,28 @@ function validateForm() {
     alert("Invalid first name. Use only letters.");
     return false;
   }
+
+  if (!nameRegex.test(lastName)) {
+    alert("Invalid last name. Use only letters.");
+    return false;
+  }
+
+  if (!emailRegex.test(email)) {
+    alert("Invalid email.");
+    return false;
+  }
+
+  if (!phoneRegex.test(phone)) {
+    alert("Invalid Phone Number. Use only numbers.");
+    return false;
+  }
+
+  if (!passwordRegex.test(password)) {
+    alert("Invalid Password.");
+    return false;
+  }
+
+  
   // write codes for validate other fields like above
 
 
